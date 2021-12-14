@@ -1,0 +1,116 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:foreground="?android:selectableItemBackground"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="20dp"
+    app:cardBackgroundColor="#ffffff"
+    app:cardMaxElevation="4dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true">
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="30dp"
+        android:stretchColumns="1">
+        <TableRow
+            android:layout_marginBottom="10dp">
+            <TextView
+                android:id="@+id/type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TYPE"
+                android:textSize="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Limit : $"
+                android:gravity="right"
+                android:textColor="#ff5d3d"/>
+
+            <TextView
+                android:id="@+id/target"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TARGET"
+                android:gravity="right"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                android:textColor="#ff5d3d"/>
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/goal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Used : $"
+                android:gravity="right"
+                android:textColor="#60f542"/>
+            <TextView
+                android:id="@+id/moneyUsed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="moneyUsed"
+                android:gravity="right"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#60f542" />
+        </TableRow>
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/ProgressBar_Scale"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:indeterminate="false"
+            android:max="100"
+            android:minWidth="200dp"
+            android:minHeight="10dp"
+            android:progress="20" />
+        <TableRow>
+            <TextView
+                android:id="@+id/startDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="START DATE" />
+            <TextView/>
+
+            <TextView
+                android:id="@+id/endDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="END DATE"
+                android:gravity="right" />
+        </TableRow>
+    </TableLayout>
+        <ImageView
+            android:id="@+id/failimage"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fail_stamp"
+            android:adjustViewBounds="true"
+            android:visibility="invisible"
+            />
+        <ImageView
+            android:id="@+id/successimage"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/success_img"
+            android:adjustViewBounds="true"
+            android:visibility="invisible"
+            />
+    </FrameLayout>
+</androidx.cardview.widget.CardView>

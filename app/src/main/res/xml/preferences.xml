@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parentView">
+
+    <PreferenceCategory
+        android:title="General" >
+
+        <CheckBoxPreference
+            android:key="@string/pref_splash_key"
+            android:title="Splash screen"
+            android:summary="Display the splash screen when launching the application"
+            android:defaultValue="@bool/pref_splash_default" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:title="About" >
+
+        <Preference
+            android:title="Vision"
+            android:summary="1.0.0" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

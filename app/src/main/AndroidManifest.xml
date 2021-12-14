@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.myapplication">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Money Manager"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication">
+        <activity android:name=".SetMoneyUsedActivity"></activity>
+        <activity
+            android:name=".ChartActivity"
+            android:label="Chart"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".SplashScreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".setgoal"
+            android:exported="false" />
+        <activity android:name=".MyPref_Frag"/>
+        <activity
+            android:name=".MainActivity"
+            android:label="Money Manager"
+            android:theme="@style/Theme.MyApplication.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ChallengeActivity"
+            android:label="Challenge"
+            android:parentActivityName=".MainActivity" />
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <activity
+            android:name=".CalendarActivity"
+            android:label="Calendar"
+            android:parentActivityName=".MainActivity">
+        </activity>
+
+    </application>
+
+</manifest>

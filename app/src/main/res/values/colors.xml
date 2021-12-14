@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#292929</color>
+    <color name="colorPrimaryDark">#444444</color>
+    <color name="colorAccent">#7DC5FD</color>
+    <color name="colorPrimary">#fece2f</color>
+    <color name="colorBackground">#EBEBEB</color>
+    <color name="colorTrendingStart">#f9c449</color>
+    <color name="colorTrendingEnd">#e8a49c</color>
+    <color name="colorDivider">#D6D6D6</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="cardview_light_background">#f5f5f5</color>
+    <color name="color_one">#fb7268</color>
+    <color name="color_white">#ededf2</color>
+    <color name="color_two">#E3E0E0</color>
+
+    <color name="R">#FFA726</color>
+    <color name="Python">#66BB6A</color>
+    <color name="CPP">#EF5350</color>
+    <color name="Java">#29B6F6</color>
+
+</resources>
