@@ -60,7 +60,7 @@ public class FirstFragment extends Fragment {
         more.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getActivity(),CalendarActivity.class);
+                Intent intent = new Intent(getActivity(),Currency.class);
                 startActivity(intent);
             }
         });

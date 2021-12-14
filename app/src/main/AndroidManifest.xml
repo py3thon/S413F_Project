@@ -2,18 +2,29 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myapplication">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
+
+        android:usesCleartextTraffic="true"
+
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="Money Manager"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".SetMoneyUsedActivity"></activity>
+        <activity
+            android:name=".Currency"
+            android:exported="false"
+            android:label="Currency"
+            android:parentActivityName=".MainActivity"/>
+        <activity android:name=".SetMoneyUsedActivity" />
         <activity
             android:name=".ChartActivity"
             android:label="Chart"
-            android:parentActivityName=".MainActivity"></activity>
+            android:parentActivityName=".MainActivity" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -24,7 +35,7 @@
         <activity
             android:name=".setgoal"
             android:exported="false" />
-        <activity android:name=".MyPref_Frag"/>
+        <activity android:name=".MyPref_Frag" />
         <activity
             android:name=".MainActivity"
             android:label="Money Manager"
@@ -37,6 +48,7 @@
             android:name=".ChallengeActivity"
             android:label="Challenge"
             android:parentActivityName=".MainActivity" />
+
         <meta-data
             android:name="preloaded_fonts"
             android:resource="@array/preloaded_fonts" />
@@ -44,9 +56,7 @@
         <activity
             android:name=".CalendarActivity"
             android:label="Calendar"
-            android:parentActivityName=".MainActivity">
-        </activity>
-
+            android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>
