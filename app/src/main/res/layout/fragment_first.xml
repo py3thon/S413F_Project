@@ -125,42 +125,7 @@
 
         </LinearLayout>
 
-        <LinearLayout
-            android:id="@+id/layoutMore"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="22dp"
-            android:background="@drawable/roundcorner"
-            android:gravity="center"
-            android:orientation="vertical"
-            app:layout_constraintStart_toEndOf="@+id/layoutCalendar"
-            android:padding="15dp"
-            app:layout_constraintDimensionRatio="H, 1:1"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/layoutCalendar" >
 
-            <ImageView
-                android:id="@+id/more"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_margin="8dp"
-                android:contentDescription="@string/app_name"
-                android:padding="8dp"
-                android:src="@drawable/more"
-                tools:layout_editor_absoluteX="57dp"
-                tools:layout_editor_absoluteY="31dp"
-                android:onClick="more"/>
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="@string/More"
-                android:textColor="@color/colorPrimaryDark"
-                android:textSize="20sp"
-                android:fontFamily="@font/fredoka_one" />
-
-        </LinearLayout>
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
@@ -168,7 +133,7 @@
             android:layout_marginTop="22dp"
             android:background="@drawable/trending_background"
             android:padding="20dp"
-            app:layout_constraintEnd_toEndOf="@id/layoutMore"
+            app:layout_constraintEnd_toEndOf="@id/layoutChart"
             app:layout_constraintStart_toStartOf="@+id/layoutCalendar"
             app:layout_constraintTop_toBottomOf="@+id/layoutGoal" >
 

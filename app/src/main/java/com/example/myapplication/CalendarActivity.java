@@ -121,7 +121,26 @@ public class CalendarActivity extends AppCompatActivity /*implements Runnable*/{
                                 // format in String type Variable
                                 // Add 1 in month because month
                                 // index is start with 0
-                                today = year + "-" + (month + 1) +  "-" + dayOfMonth;
+                                String tempDay = "";
+                                String tempMonth = "" ;
+                                int aMonth = month +1 ;
+                                if (dayOfMonth >= 1 && dayOfMonth <=9){
+
+                                    tempDay += "0" + (dayOfMonth);
+                                } else {
+                                    tempDay = String.valueOf(dayOfMonth);
+                                }
+
+
+
+                                if (aMonth  >= 1 &&aMonth <=9){
+
+                                    tempMonth += "0" + (aMonth);
+                                } else {
+                                    tempMonth = String.valueOf(aMonth);
+                                }
+
+                                today = year + "-" +tempMonth +  "-" + tempDay;
 
                                 // set this date in TextView for Display
                                 //date_view.setText(Date);
@@ -144,7 +163,9 @@ public class CalendarActivity extends AppCompatActivity /*implements Runnable*/{
 
         Intent intent = new Intent(this, SetMoneyUsedActivity.class);
         intent.putExtra("today String", today);
+        System.out.println("111 today = " + today);
         intent.putExtra("date object", dateObject);
+        System.out.println("111 dateObject = " + dateObject);
         startActivity(intent);
         //startActivityForResult(intent, JOB_ADD_ID);
         overridePendingTransition(android.R.anim.slide_in_left, android.R.anim.slide_out_right);
