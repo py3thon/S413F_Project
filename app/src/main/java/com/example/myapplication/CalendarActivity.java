@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.ItemTouchHelper;
@@ -22,7 +24,7 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 
-public class CalendarActivity extends AppCompatActivity implements Runnable{
+public class CalendarActivity extends AppCompatActivity /*implements Runnable*/{
     CalendarView calendar;
     private String today;
     private Date dateObject;
@@ -35,6 +37,7 @@ public class CalendarActivity extends AppCompatActivity implements Runnable{
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_calendar);
 
         calendar = (CalendarView)
@@ -160,24 +163,24 @@ public class CalendarActivity extends AppCompatActivity implements Runnable{
         itemAdapter.notifyDataSetChanged();
     }
 
+    //@RequiresApi(api = Build.VERSION_CODES.O)
     public void all(View view) {
-        /*array = db.getAllSpend();
+        array = db.getAllSpend();
         System.out.println(array);
         itemAdapter.setSpendArray(array);
-        itemAdapter.notifyDataSetChanged();*/
-        run();
+        itemAdapter.notifyDataSetChanged();
     }
 
 
 
-    @Override
+    /*@Override
     public void run() {
         array = db.getAllSpend();
         System.out.println(array);
         itemAdapter.setSpendArray(array);
         itemAdapter.notifyDataSetChanged();
         System.out.println("This code is running in a thread");
-    }
+    }*/
 
 
     /*protected void onResume() {
